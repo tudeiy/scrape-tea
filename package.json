@@ -1,0 +1,14 @@
+{
+  "name": "scrape-tea",
+  "version": "1.0.0",
+  "description": "Skrip untuk scraping alamat dari explorer Sepolia Tea",
+  "main": "scrape.js",
+  "scripts": {
+    "start": "node scrape.js"
+  },
+  "author": "Yonarebahan",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}

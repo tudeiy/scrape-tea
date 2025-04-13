@@ -40,24 +40,10 @@ sudo apt-get install -y nodejs
 echo "✅ Node.js versi: $(node -v)"
 echo "✅ npm versi: $(npm -v)"
 
-# Step 3: Clone repo
-REPO_URL="https://github.com/tudeiy/scrape-tea.git"
-TARGET_DIR="$HOME/scrape-tea"
-
-if [ -d "$TARGET_DIR" ]; then
-  echo "📂 Folder scrape-tea sudah ada, menghapus & clone ulang..."
-  rm -rf "$TARGET_DIR"
-fi
-
-git clone "$REPO_URL" "$TARGET_DIR"
-cd "$TARGET_DIR" || exit
-
 # Step 4: Install puppeteer
 npm init -y
 
 npm install puppeteer
-
-
 
 echo "✅ Instalasi & scraping selesai!"
 echo "📁 Hasil scraping ada di: $TARGET_DIR/scraped_addresses.txt"

@@ -9,6 +9,6 @@
   "author": "yona",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^21.6.1"
+    "puppeteer": "^22.8.2"
   }
 }

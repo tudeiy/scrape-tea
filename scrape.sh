@@ -23,28 +23,43 @@ echo ""
 echo " 🚀 join channel Airdrop Sambil Rebahan : https://t.me/kingfeeder "
 echo ""
 
-echo "🔧 Memulai full install untuk Linux kosong..."
+#!/bin/bash
 
-# Step 1: Update & install tools dasar
-echo "📦 Update dan install dependencies..."
+echo "🚀 Mulai instalasi otomatis untuk scraping TEA Sepolia..."
+
+# Step 1: Update & install tool dasar
+echo "📦 Update dan install dependencies dasar..."
 sudo apt-get update -y
 sudo apt-get install -y curl git build-essential
 
-# Step 2: Install Node.js LTS 18 dan npm
+# Step 2: Install Node.js LTS (versi 18)
 echo "⬇️ Menginstall Node.js + npm..."
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# Step 3: Cek versi
 echo "✅ Node.js versi: $(node -v)"
 echo "✅ npm versi: $(npm -v)"
 
-# Step 6: Install dependency
-echo "📦 Menjalankan npm install..."
-npm install
-npm init -y
+# Step 3: Clone repo
+REPO_URL="https://github.com/tudeiy/scrape-tea.git"
+TARGET_DIR="$HOME/scrape-tea"
+
+if [ -d "$TARGET_DIR" ]; then
+  echo "📂 Folder scrape-tea sudah ada, menghapus & clone ulang..."
+  rm -rf "$TARGET_DIR"
+fi
+
+git clone "$REPO_URL" "$TARGET_DIR"
+cd "$TARGET_DIR" || exit
+
+# Step 4: Install puppeteer
+echo "📦 Install puppeteer..."
 npm install puppeteer
 
+# Step 5: Jalankan script scrape.sh (dari repo kamu)
+echo "🔁 Menjalankan scrape.sh..."
+chmod +x scrape.sh
+./scrape.sh
 
-echo "✅ Jalankan script node scrape.js"
-
+echo "✅ Instalasi & scraping selesai!"
+echo "📁 Hasil scraping ada di: $TARGET_DIR/scraped_addresses.txt"

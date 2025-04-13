@@ -53,7 +53,6 @@ git clone "$REPO_URL" "$TARGET_DIR"
 cd "$TARGET_DIR" || exit
 
 # Step 4: Install puppeteer
-echo "📦 Install puppeteer..."
 npm install
 
 npm install puppeteer

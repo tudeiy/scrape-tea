@@ -53,11 +53,13 @@ git clone "$REPO_URL" "$TARGET_DIR"
 cd "$TARGET_DIR" || exit
 
 # Step 4: Install puppeteer
+npm init -y
+
 npm install
 
 npm install puppeteer
 
-npm init -y
+
 
 echo "✅ Instalasi & scraping selesai!"
 echo "📁 Hasil scraping ada di: $TARGET_DIR/scraped_addresses.txt"

@@ -55,8 +55,6 @@ cd "$TARGET_DIR" || exit
 # Step 4: Install puppeteer
 npm init -y
 
-npm install
-
 npm install puppeteer
 
 

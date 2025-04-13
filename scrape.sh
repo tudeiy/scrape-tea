@@ -56,10 +56,7 @@ cd "$TARGET_DIR" || exit
 echo "📦 Install puppeteer..."
 npm install puppeteer
 
-# Step 5: Jalankan script scrape.sh (dari repo kamu)
-echo "🔁 Menjalankan scrape.sh..."
-chmod +x scrape.sh
-./scrape.sh
+npm init -y
 
 echo "✅ Instalasi & scraping selesai!"
 echo "📁 Hasil scraping ada di: $TARGET_DIR/scraped_addresses.txt"

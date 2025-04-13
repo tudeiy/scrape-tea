@@ -43,7 +43,7 @@ echo "✅ npm versi: $(npm -v)"
 echo "📦 Menjalankan npm install..."
 npm install
 npm init -y
-npm install puppeteer --save
+npm install puppeteer
 
 
 echo "✅ Jalankan script node scrape.js"

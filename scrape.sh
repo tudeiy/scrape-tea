@@ -42,8 +42,8 @@ echo "✅ npm versi: $(npm -v)"
 # Step 6: Install dependency
 echo "📦 Menjalankan npm install..."
 npm install
-npm install puppeteer
 npm init -y
+npm install puppeteer --save
 
 
 echo "✅ Jalankan script node scrape.js"
